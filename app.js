@@ -6,7 +6,7 @@ mobileMenuButton.addEventListener('click', () => {
   const isHidden = mobileMenu.classList.contains('hidden');
   
   if (isHidden) {
-    mobileMenu.classList.remove('hidden');
+    mobileMenu.classList.remove('hidden'); 
     setTimeout(() => {
       mobileMenu.classList.remove('opacity-0');
       mobileMenu.classList.remove('-translate-y-2'); // Changed from -translate-y-5
