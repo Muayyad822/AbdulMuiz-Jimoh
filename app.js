@@ -82,3 +82,20 @@ setInterval(() => {
   textChange.textContent = toggle ? 'Web Designer' : 'Web Developer';
   toggle = !toggle;
 }, 1800);
+
+
+// Smooth Scroll for Anchor Links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(event) {
+    event.preventDefault();
+    const targetId = this.getAttribute('href').substring(1);
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      window.scrollTo({
+        top: targetElement.offsetTop,
+        behavior: 'smooth'
+      });
+    }
+  });
+});
