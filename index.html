@@ -283,7 +283,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           <!-- Skill Card 1 -->
           <div
-            class="flex bg-gray-200 dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-primary/30 dark:hover:shadow-primary-light/30 transition-all duration-300 hover:-translate-y-1"
+            class="flex flex-col bg-gray-200 dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-primary/30 dark:hover:shadow-primary-light/30 transition-all duration-300 hover:-translate-y-1"
           >
             <!-- <img src="./assets/fed.png" alt="Frontend Development" class="w-16 h-16 object-contain mr-4" /> -->
             <i
@@ -302,7 +302,7 @@
 
           <!-- Skill Card 2 -->
           <div
-            class="flex bg-gray-200 dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-primary/30 dark:hover:shadow-primary-light/30 transition-all duration-300 hover:-translate-y-1"
+            class="flex flex-col bg-gray-200 dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-primary/30 dark:hover:shadow-primary-light/30 transition-all duration-300 hover:-translate-y-1"
           >
             <!-- <img src="./assets/bed.png" alt="Backend Development" class="w-16 h-16 object-contain mr-4" /> -->
             <i
@@ -319,7 +319,7 @@
           </div>
           <!-- Skill Card 3 -->
           <div
-            class="flex bg-gray-200 dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-primary/30 dark:hover:shadow-primary-light/30 transition-all duration-300 hover:-translate-y-1"
+            class="flex flex-col bg-gray-200 dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-primary/30 dark:hover:shadow-primary-light/30 transition-all duration-300 hover:-translate-y-1"
           >
             <!-- <img src="./assets/tool.png" alt="Tools" class="w-16 h-16 object-contain mr-4" /> -->
             <i
@@ -339,7 +339,7 @@
 
           <!-- Skill Card 4 -->
           <div
-            class="flex bg-gray-200 dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-primary/30 dark:hover:shadow-primary-light/30 transition-all duration-300 hover:-translate-y-1"
+            class="flex flex-col bg-gray-200 dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-primary/30 dark:hover:shadow-primary-light/30 transition-all duration-300 hover:-translate-y-1"
           >
             <!-- <img src="./assets/ss.png" alt="Soft Skills" class="w-16 h-16 object-contain mr-4" /> -->
             <i
@@ -853,67 +853,68 @@
         <div
           class="flex flex-col lg:flex-row justify-center gap-16 max-w-6xl mx-auto"
         >
-          <div class="max-w-md">
-            <h4 class="text-xl font-bold mb-8">Get In Touch</h4>
-
-            <!-- Phone -->
-            <div class="flex items-start gap-4 mb-6">
-              <i
-                class="fas fa-phone text-primary dark:text-primary-light text-lg mt-1 w-6"
-              ></i>
-              <div>
-                <p>
-                  <a
-                    href="tel:+2348169017058"
-                    class="text-gray-900 dark:text-gray-100 hover:text-primary dark:hover:text-primary-light transition-colors"
-                    >+2348169017058</a
-                  >
-                </p>
-                <p>
-                  <a
-                    href="tel:+2349017109582"
-                    class="text-gray-900 dark:text-gray-100 hover:text-primary dark:hover:text-primary-light transition-colors"
-                    >+2349017109582</a
-                  >
-                </p>
+        <div class="max-w-md">
+          <h4 class="text-2xl font-bold mb-8 text-primary dark:text-primary-light">Get In Touch</h4>
+          
+          <!-- Social Media Links -->
+          <div class="grid grid-cols-1 gap-6">
+            <!-- Email - Fixed version -->
+            <div class="flex items-center gap-4 group">
+              <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 dark:bg-primary-light/10 flex items-center justify-center group-hover:bg-primary/20 dark:group-hover:bg-primary-light/20 transition-colors">
+                <i class="fas fa-envelope text-primary dark:text-primary-light text-lg"></i>
+              </div>
+              <div class="min-w-0"> <!-- Added min-w-0 to prevent text overflow issues -->
+                <p class="text-sm text-gray-500 dark:text-gray-400">Email</p>
+                <a href="mailto:muayyad822@gmail.com" class="font-medium text-gray-900 dark:text-gray-100 hover:text-primary dark:hover:text-primary-light transition-colors truncate block"> <!-- Added truncate -->
+                  abdulmuizjimoh822@gmail.com
+                </a>
               </div>
             </div>
-
-            <!-- Address -->
-            <div class="flex items-start gap-4 mb-6">
-              <i
-                class="fas fa-map-marker-alt text-primary dark:text-primary-light text-lg mt-1 w-6"
-              ></i>
-              <address class="not-italic text-gray-900 dark:text-gray-100">
-                <a
-                  href="https://www.google.com/maps/search/?api=1&query=15+Oduwaye+Street,+Off+Military+Zone,+Ejigbo,+Lagos,+Nigeria"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="hover:text-primary dark:hover:text-primary-light transition-colors"
-                >
-                  15, Oduwaye Street, Off Military Zone, Ejigbo, Lagos, Nigeria
+        
+            <!-- Twitter/X -->
+            <div class="flex items-center gap-4 group">
+              <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 dark:bg-primary-light/10 flex items-center justify-center group-hover:bg-primary/20 dark:group-hover:bg-primary-light/20 transition-colors">
+                <i class="fab fa-twitter text-primary dark:text-primary-light text-lg"></i>
+              </div>
+              <div>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Twitter/X</p>
+                <a href="https://x.com/MuizMuayyad" target="_blank" class="font-medium text-gray-900 dark:text-gray-100 hover:text-primary dark:hover:text-primary-light transition-colors">
+                  @MuizMuayyad
                 </a>
-              </address>
+              </div>
             </div>
-
-            <!-- Email -->
-            <div class="flex items-start gap-4">
-              <i
-                class="fas fa-envelope text-primary dark:text-primary-light text-lg mt-1 w-6"
-              ></i>
-              <p>
-                <a
-                  href="mailto:muayyad822@gmail.com"
-                  class="text-gray-900 dark:text-gray-100 hover:text-primary dark:hover:text-primary-light transition-colors"
-                  >abdulmuizjimoh822@gmail.com</a
-                >
-              </p>
+        
+            <!-- LinkedIn -->
+            <div class="flex items-center gap-4 group">
+              <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 dark:bg-primary-light/10 flex items-center justify-center group-hover:bg-primary/20 dark:group-hover:bg-primary-light/20 transition-colors">
+                <i class="fab fa-linkedin-in text-primary dark:text-primary-light text-lg"></i>
+              </div>
+              <div>
+                <p class="text-sm text-gray-500 dark:text-gray-400">LinkedIn</p>
+                <a href="https://www.linkedin.com/in/abdulmuiz-jimoh-9298111b3/" target="_blank" class="font-medium text-gray-900 dark:text-gray-100 hover:text-primary dark:hover:text-primary-light transition-colors">
+                  AbdulMuiz Jimoh
+                </a>
+              </div>
+            </div>
+        
+            <!-- GitHub -->
+            <div class="flex items-center gap-4 group">
+              <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 dark:bg-primary-light/10 flex items-center justify-center group-hover:bg-primary/20 dark:group-hover:bg-primary-light/20 transition-colors">
+                <i class="fab fa-github text-primary dark:text-primary-light text-lg"></i>
+              </div>
+              <div>
+                <p class="text-sm text-gray-500 dark:text-gray-400">GitHub</p>
+                <a href="https://github.com/Muayyad822" target="_blank" class="font-medium text-gray-900 dark:text-gray-100 hover:text-primary dark:hover:text-primary-light transition-colors">
+                  Muayyad822
+                </a>
+              </div>
             </div>
           </div>
+        </div>
 
           <!-- Contact Form -->
           <div class="max-w-md">
-            <h4 class="text-xl font-bold mb-8">
+            <h4 class="text-xl font-bold mb-8 text-primary dark:text-primary-light">
               How Can I Be Of Service To You?
             </h4>
 
@@ -961,7 +962,7 @@
     <footer
       class="py-8 text-center border-t border-gray-300 dark:border-gray-700"
     >
-      <div class="flex justify-center space-x-4 mb-4 text-xl">
+      <!-- <div class="flex justify-center space-x-4 mb-4 text-xl">
         <a href="https://x.com/MuizMuayyad" aria-label="X profile">
           <i class="fab fa-twitter"></i>
         </a>
@@ -971,7 +972,7 @@
         >
           <i class="fab fa-linkedin"></i>
         </a>
-      </div>
+      </div> -->
       <p class="text-gray-900 dark:text-gray-100">
         &copy; <span id="current-year">2023</span> AbdulMuiz Jimoh. All rights
         reserved.
