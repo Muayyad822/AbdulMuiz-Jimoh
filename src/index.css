@@ -1,0 +1,28 @@
+@import "tailwindcss";
+@variant dark (&:where(.dark, .dark *));
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+@theme {
+  --font-montserrat: 'Montserrat', sans-serif;
+  
+  --color-primary: #673AB7;
+  --color-primary-light: #7E57C2;
+  --color-primary-dark: #5E35B1;
+
+  --animate-fade-in-out: fadeInOut 4s infinite;
+  --animate-spin-slow: spin 6s linear infinite;
+
+  @keyframes fadeInOut {
+    0%, 50% { opacity: 1; }
+    25%, 75% { opacity: 0.1; }
+  }
+}
+
+/* Custom utilities if needed, or just rely on theme */
+.font-montserrat {
+  font-family: var(--font-montserrat);
+}
