@@ -1,0 +1,112 @@
+import { useState, useEffect } from 'react';
+
+const Header = () => {
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isDark, setIsDark] = useState(false);
+
+    useEffect(() => {
+        if (
+            localStorage.getItem('color-theme') === 'dark' ||
+            (!('color-theme' in localStorage) &&
+                window.matchMedia('(prefers-color-scheme: dark)').matches)
+        ) {
+            document.documentElement.classList.add('dark');
+            setIsDark(true);
+        } else {
+            document.documentElement.classList.remove('dark');
+            setIsDark(false);
+        }
+    }, []);
+
+    const toggleTheme = () => {
+        if (document.documentElement.classList.contains('dark')) {
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem('color-theme', 'light');
+            setIsDark(false);
+        } else {
+            document.documentElement.classList.add('dark');
+            localStorage.setItem('color-theme', 'dark');
+            setIsDark(true);
+        }
+    };
+
+    const toggleMobileMenu = () => {
+        setIsMobileMenuOpen(!isMobileMenuOpen);
+    };
+
+    return (
+        <>
+            <header className="fixed top-0 left-0 w-full z-50 bg-gray-100/90 dark:bg-gray-900/90 backdrop-blur-sm py-4 px-4 sm:px-8 lg:px-12 flex justify-between items-center shadow-md dark:shadow-gray-800/50">
+                <a href="#About" className="flex items-center gap-2">
+                    <img src="/assets/ajlogo.png" alt="logo" className="h-12 w-auto" />
+                </a>
+
+                <div className="flex items-center gap-6">
+                    {/* Desktop Navigation */}
+                    <nav className="hidden md:block">
+                        <ul className="flex space-x-6">
+                            {['Home', 'Skills', 'Tools', 'Projects', 'Contact'].map((item) => (
+                                <li key={item}>
+                                    <a
+                                        href={`#${item === 'Home' ? 'About' : item}`}
+                                        className="text-gray-900 dark:text-gray-100 hover:text-primary dark:hover:text-primary-light hover:font-bold transition-all duration-200 border-b-2 border-transparent hover:border-primary dark:hover:border-primary-light pb-1"
+                                    >
+                                        {item}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    </nav>
+
+                    {/* Theme Toggle */}
+                    <button
+                        onClick={toggleTheme}
+                        aria-label="Toggle dark mode"
+                        className="p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-light"
+                    >
+                        {isDark ? (
+                            <i className="fas fa-sun text-gray-900 dark:text-gray-100 text-xl"></i>
+                        ) : (
+                            <i className="fas fa-moon text-gray-900 dark:text-gray-100 text-xl"></i>
+                        )}
+                    </button>
+
+                    {/* Mobile Menu Button */}
+                    <button
+                        onClick={toggleMobileMenu}
+                        aria-label="Toggle menu"
+                        className="md:hidden text-gray-900 dark:text-gray-100 text-xl p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                    >
+                        <i className="fas fa-bars"></i>
+                    </button>
+                </div>
+            </header>
+
+            {/* Mobile Menu */}
+            <div
+                className={`fixed top-20 left-0 w-full bg-gray-100 dark:bg-gray-900 shadow-lg z-40 transition-all duration-300 transform ${isMobileMenuOpen
+                        ? 'translate-y-0 opacity-100'
+                        : '-translate-y-5 opacity-0 hidden'
+                    }`}
+            >
+                <nav className="p-4">
+                    <ul className="space-y-4">
+                        {['Home', 'Skills', 'Tools', 'Projects', 'Contact'].map((item) => (
+                            <li key={item}>
+                                <a
+                                    href={`#${item === 'Home' ? 'About' : item}`}
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                    className="block py-2 px-4 text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg transition-colors duration-200 font-medium"
+                                >
+                                    {item}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </nav>
+            </div>
+        </>
+    );
+};
+
+export default Header;
