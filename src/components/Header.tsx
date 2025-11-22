@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
+import GamesModal from './GamesModal';
 
 const Header = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isDark, setIsDark] = useState(false);
+    const [isGamesOpen, setIsGamesOpen] = useState(false);
 
     useEffect(() => {
         if (
@@ -36,12 +38,12 @@ const Header = () => {
 
     return (
         <>
-            <header className="fixed top-0 left-0 w-full z-50 bg-gray-100/90 dark:bg-gray-900/90 backdrop-blur-sm py-4 px-4 sm:px-8 lg:px-12 flex justify-between items-center shadow-md dark:shadow-gray-800/50">
+            <header className="fixed top-0 left-0 w-full z-50 bg-gray-100/90 dark:bg-gray-900/90 backdrop-blur-sm py-4 px-4 sm:px-8 lg:px-12 flex justify-between items-center gap-4 shadow-md dark:shadow-gray-800/50">
                 <a href="#About" className="flex items-center gap-2">
                     <img src="/assets/ajlogo.png" alt="logo" className="h-12 w-auto" />
                 </a>
 
-                <div className="flex items-center gap-6">
+                <div className="flex items-center gap-4 md:gap-6">
                     {/* Desktop Navigation */}
                     <nav className="hidden md:block">
                         <ul className="flex space-x-6">
@@ -71,6 +73,16 @@ const Header = () => {
                         )}
                     </button>
 
+                    {/* Game Icon */}
+                    <button
+                        onClick={() => setIsGamesOpen(true)}
+                        aria-label="Open games"
+                        className="p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-light hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                        title="Play Games"
+                    >
+                        <i className="fas fa-gamepad text-gray-900 dark:text-gray-100 text-xl"></i>
+                    </button>
+
                     {/* Mobile Menu Button */}
                     <button
                         onClick={toggleMobileMenu}
@@ -85,8 +97,8 @@ const Header = () => {
             {/* Mobile Menu */}
             <div
                 className={`fixed top-20 left-0 w-full bg-gray-100 dark:bg-gray-900 shadow-lg z-40 transition-all duration-300 transform ${isMobileMenuOpen
-                        ? 'translate-y-0 opacity-100'
-                        : '-translate-y-5 opacity-0 hidden'
+                    ? 'translate-y-0 opacity-100'
+                    : '-translate-y-5 opacity-0 hidden'
                     }`}
             >
                 <nav className="p-4">
@@ -105,6 +117,8 @@ const Header = () => {
                     </ul>
                 </nav>
             </div>
+
+            <GamesModal isOpen={isGamesOpen} onClose={() => setIsGamesOpen(false)} />
         </>
     );
 };
