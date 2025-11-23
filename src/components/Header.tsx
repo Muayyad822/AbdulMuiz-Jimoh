@@ -47,7 +47,7 @@ const Header = () => {
                     {/* Desktop Navigation */}
                     <nav className="hidden md:block">
                         <ul className="flex space-x-6">
-                            {['Home', 'Skills', 'Tools', 'Projects', 'Contact'].map((item) => (
+                            {['Home', 'Skills', 'Tools', 'Experience', 'Projects', 'Contact'].map((item) => (
                                 <li key={item}>
                                     <a
                                         href={`#${item === 'Home' ? 'About' : item}`}
@@ -94,16 +94,32 @@ const Header = () => {
                 </div>
             </header>
 
-            {/* Mobile Menu */}
+            {/* Mobile Menu Overlay */}
             <div
-                className={`fixed top-20 left-0 w-full bg-gray-100 dark:bg-gray-900 shadow-lg z-40 transition-all duration-300 transform ${isMobileMenuOpen
-                    ? 'translate-y-0 opacity-100'
-                    : '-translate-y-5 opacity-0 hidden'
+                className={`fixed inset-0 bg-black/50 z-[60] transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+                onClick={() => setIsMobileMenuOpen(false)}
+                aria-hidden="true"
+            />
+
+            {/* Mobile Menu Drawer */}
+            <div
+                className={`fixed top-0 right-0 h-full w-64 bg-gray-100 dark:bg-gray-900 shadow-2xl z-[70] transition-transform duration-300 transform ${isMobileMenuOpen
+                    ? 'translate-x-0'
+                    : 'translate-x-full'
                     }`}
             >
+                <div className="flex justify-end p-4">
+                    <button
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        aria-label="Close menu"
+                        className="text-gray-900 dark:text-gray-100 text-xl p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                    >
+                        <i className="fas fa-times"></i>
+                    </button>
+                </div>
                 <nav className="p-4">
                     <ul className="space-y-4">
-                        {['Home', 'Skills', 'Tools', 'Projects', 'Contact'].map((item) => (
+                        {['Home', 'Skills', 'Tools', 'Experience', 'Projects', 'Contact'].map((item) => (
                             <li key={item}>
                                 <a
                                     href={`#${item === 'Home' ? 'About' : item}`}
