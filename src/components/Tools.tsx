@@ -15,11 +15,11 @@ const Tools = () => {
     ];
 
     return (
-        <section id="Tools" className="lg:mb-32 pt-24 px-4">
+        <section id="Tools" className="lg:mb-32 pt-24 px-4 scroll-mt-28">
             <h1 className="text-3xl font-bold mb-12 border-b-2 border-primary pb-2 w-fit mx-auto lg:mx-64">
                 TOOLS  & TECHNOLOGIES
             </h1>
-            
+
 
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
                 {tools.map((tool) => (
