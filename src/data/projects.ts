@@ -72,14 +72,14 @@ export const projects = [
         live: 'https://talk-2-muayyad.onrender.com/',
         github: 'https://github.com/Muayyad822/Talk-2-Muayyad',
     },
-    {
-        title: 'Anaa Shahirun',
-        description:
-            'A React-powered web app that helps poets compose verses with AI suggestions for meter, rhyme, and structure. Integrates Google Gemini API to analyze classical Arabic poetry rules. Clean Arabic UI with real-time feedback.',
-        image: '/assets/poem.PNG',
-        live: 'https://poem-ai-app.vercel.app/',
-        github: 'https://github.com/Muayyad822/Poem-AI-App',
-    },
+    // {
+    //     title: 'Anaa Shahirun',
+    //     description:
+    //         'A React-powered web app that helps poets compose verses with AI suggestions for meter, rhyme, and structure. Integrates Google Gemini API to analyze classical Arabic poetry rules. Clean Arabic UI with real-time feedback.',
+    //     image: '/assets/poem.PNG',
+    //     live: 'https://poem-ai-app.vercel.app/',
+    //     github: 'https://github.com/Muayyad822/Poem-AI-App',
+    // },
 ];
 
 export const games = [

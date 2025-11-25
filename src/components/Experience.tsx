@@ -2,8 +2,8 @@ import { experience } from '../data/experience';
 
 const Experience = () => {
     return (
-        <section id="Experience" className="mb-32 pt-24 px-4">
-            <h1 className="text-3xl font-bold mb-12 border-b-2 border-primary pb-2 w-fit mx-auto uppercase">
+        <section id="Experience" className="lg:mb-32 pt-24 px-4">
+            <h1 className="text-3xl font-bold mb-12 border-b-2 border-primary pb-2 w-fit mx-auto lg:mx-64 uppercase">
                 Work Experience
             </h1>
 

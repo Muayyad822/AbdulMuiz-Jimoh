@@ -14,7 +14,7 @@ const Hero = () => {
     return (
         <section
             id="About"
-            className="flex flex-col lg:flex-row items-center justify-center gap-16 mb-72 pt-[245px] px-6"
+            className="flex flex-col lg:flex-row items-center justify-center  lg:mb-32 lg:pt-64 pt-24 px-6"
         >
             <div className="relative group">
                 <img
