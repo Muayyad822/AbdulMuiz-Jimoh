@@ -9,11 +9,15 @@ const Projects = () => {
                 PROJECTS
             </h1>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="md:hidden text-center text-sm text-gray-500 dark:text-gray-400 mb-6 animate-pulse">
+                Swipe to explore <i className="fa-solid fa-arrow-right ml-1"></i>
+            </div>
+
+            <div className="flex overflow-x-auto md:overflow-visible pb-6 snap-x snap-mandatory md:grid md:grid-cols-2 lg:grid-cols-3 md:pb-0 gap-6 md:gap-8 max-w-6xl mx-auto">
                 {projects.map((project) => (
                     <div
                         key={project.title}
-                        className="bg-white dark:bg-gray-800 rounded-t-xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300 flex flex-col min-h-[400px]"
+                        className="min-w-[80vw] snap-center md:min-w-0 bg-white dark:bg-gray-800 rounded-t-xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300 flex flex-col min-h-[400px]"
                     >
                         <img
                             src={project.image}
