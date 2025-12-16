@@ -30,7 +30,7 @@ const Hero = () => {
                     {role}
                 </h4>
                 <h1 className="text-4xl font-bold mb-4">
-                    AbdulMuiz<span className="bg-primary text-white px-2 mx-4 rounded">Jimoh</span>
+                    AbdulMuiz <span className="bg-primary text-white px-2 mx-4 rounded">Jimoh</span>
                 </h1>
                 <p className="text-base leading-relaxed mb-8">
                     I'm a web developer passionate about creating clean, user-friendly
