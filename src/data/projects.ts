@@ -1,6 +1,14 @@
 
 export const projects = [
     {
+        title: 'Africa Property Hub Website',
+        description:
+            'This is an African real estate platform that helps to build, buy, sell, rent or manage property from a place of information across Africa and beyond.',
+        image: '/assets/aph.PNG',
+        live: 'https://africapropertyhub.com',
+        github: 'https://github.com/Muayyad822/africapropertyhub',
+    },
+    {
         title: 'BSmart Product Landing Page',
         description:
             'This is a product landing page for BSmart, a company that provides smart home products. The page is designed to be responsive and accessible, with a clean and modern design.',
@@ -64,14 +72,14 @@ export const projects = [
         live: 'https://soniva.vercel.app/',
         github: 'https://github.com/Muayyad822/Soniva',
     },
-    {
-        title: 'Talk-2-Muayyad',
-        description:
-            'A real-time chat application with a responsive and user-friendly interface. It supports seamless messaging, online status indicators, and a mobile-friendly design with a sidebar toggle. Built using React, Tailwind CSS, Zustand for state management, and Socket.io for real-time communication.',
-        image: '/assets/talk.PNG',
-        live: 'https://talk-2-muayyad.onrender.com/',
-        github: 'https://github.com/Muayyad822/Talk-2-Muayyad',
-    },
+    // {
+    //     title: 'Talk-2-Muayyad',
+    //     description:
+    //         'A real-time chat application with a responsive and user-friendly interface. It supports seamless messaging, online status indicators, and a mobile-friendly design with a sidebar toggle. Built using React, Tailwind CSS, Zustand for state management, and Socket.io for real-time communication.',
+    //     image: '/assets/talk.PNG',
+    //     live: 'https://talk-2-muayyad.onrender.com/',
+    //     github: 'https://github.com/Muayyad822/Talk-2-Muayyad',
+    // },
     // {
     //     title: 'Anaa Shahirun',
     //     description:
