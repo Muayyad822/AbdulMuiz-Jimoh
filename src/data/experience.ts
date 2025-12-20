@@ -1,5 +1,11 @@
 export const experience = [
     {
+        company: 'Africa Property Hub',
+        role: 'Web Developer',
+        description:
+            'Designed and developed their real estate platform, highlighting their services and implementing key features to enhance the user experience for property seekers and agents.',
+    },
+    {
         company: 'Al-Abraar Academy',
         role: 'Web Developer',
         description:
@@ -16,11 +22,5 @@ export const experience = [
         role: 'Web Developer',
         description:
             'Designed and built a responsive landing page for their products, to highlight their smart home solutions, driving customer engagement and showcasing product features.',
-    },
-    {
-        company: 'Africa Property Hub',
-        role: 'Web Developer',
-        description:
-            'Designed and developed their real estate platform, highlighting their services and implementing key features to enhance the user experience for property seekers and agents.',
     },
 ];

@@ -50,7 +50,7 @@ const Header = () => {
                             {['Home', 'Skills', 'Tools', 'Experience', 'Projects', 'Contact'].map((item) => (
                                 <li key={item}>
                                     <a
-                                        href={`#${item === 'Home' ? 'About' : item}`}
+                                        href={`#${item === 'Home' ? 'Hero' : item}`}
                                         className="text-gray-900 dark:text-gray-100 hover:text-primary dark:hover:text-primary-light hover:font-bold transition-all duration-200 border-b-2 border-transparent hover:border-primary dark:hover:border-primary-light pb-1"
                                     >
                                         {item}
@@ -122,7 +122,7 @@ const Header = () => {
                         {['Home', 'Skills', 'Tools', 'Experience', 'Projects', 'Contact'].map((item) => (
                             <li key={item}>
                                 <a
-                                    href={`#${item === 'Home' ? 'About' : item}`}
+                                    href={`#${item === 'Home' ? 'Hero' : item}`}
                                     onClick={() => setIsMobileMenuOpen(false)}
                                     className="block py-2 px-4 text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg transition-colors duration-200 font-medium"
                                 >
