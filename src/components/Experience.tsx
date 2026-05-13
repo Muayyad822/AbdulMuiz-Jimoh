@@ -16,7 +16,15 @@ const Experience = () => {
                         <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 dark:border-gray-700">
                             <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1 flex items-center">
                                 <i className="fas fa-briefcase mr-3 text-primary text-lg"></i>
-                                {job.company}
+                                <a
+                                    href={job.website}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="hover:text-primary transition-colors duration-200 hover:underline underline-offset-2"
+                                >
+                                    {job.company}
+                                    <i className="fas fa-external-link-alt text-xs ml-2 opacity-60"></i>
+                                </a>
                             </h3>
                             <h4 className="text-lg font-semibold text-primary mb-3">
                                 {job.role}
