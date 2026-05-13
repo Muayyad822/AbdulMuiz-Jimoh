@@ -1,12 +1,36 @@
 
 export const projects = [
     {
+        title: 'Tahleem Web app ',
+        description:
+            'Tahleem is an all-in-one Islamic education platform for Muslims to perfect Tajweed, understand the Quran, and master Arabic with advanced AI technology and scholarly-verified content.', 
+        image: '/assets/tahleem.png',
+        live: 'https://tahleem.com',
+        github: 'https://github.com/Muayyad822/Tahleem',
+    },
+    {
         title: 'Africa Property Hub Website',
         description:
-            'This is an African real estate platform that helps to build, buy, sell, rent or manage property from a place of information across Africa and beyond.',
+            'This is a website for Africa Property Hub, an African real estate platform that helps to build, buy, sell, rent or manage property from a place of information across Africa and beyond.',
         image: '/assets/aph.PNG',
         live: 'https://africapropertyhub.com',
         github: 'https://github.com/Muayyad822/africapropertyhub',
+    },
+    {
+        title: 'Jarus Homes Website',
+        description:
+            'This is a website for Jarus Homes, a real estate company that provides housing solutions for everybody irrespective of their social and economic class, bridging the gap for the middle class while playing in the high-end market.',
+        image: '/assets/jarus.png',
+        live: 'https://jarushomes.com',
+        github: 'https://github.com/Muayyad822/jarushomes',
+    },
+    {
+        title: 'SHD Properties Website',
+        description:
+            'This is a website for SHD Properties, a real estate company founded by three passionate Nigerians, with experience spanning property development and real estate transactions in Nigeria and the United Kingdom, who share a common vision to make quality housing accessible and transform the real estate experience across Nigeria and Africa.',
+        image: '/assets/shd.png',
+        live: 'https://shdpropertydevelopment.com',
+        github: 'https://github.com/Muayyad822/shd-property',
     },
     {
         title: 'BSmart Product Landing Page',
@@ -113,7 +137,7 @@ export const games = [
             'A fun and engaging game built to test your reflexes and precision. Navigate through obstacles and aim for the highest score in this exciting arcade-style adventure.',
         image: '/assets/fraggy.PNG',
         live: 'https://fraggy-rouge.vercel.app/',
-        github: 'https://github.com/Muayyad822', // Placeholder if specific repo not known, user only gave link
+        github: 'https://github.com/Muayyad822/fraggy', 
     },
     {
         title: 'Rock Paper Scissors',

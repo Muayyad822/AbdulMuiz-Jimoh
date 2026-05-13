@@ -6,10 +6,13 @@ const Tools = () => {
         { name: 'Tailwind CSS', image: '/assets/tailwind.png' },
         { name: 'Sass', icon: 'fab fa-sass', color: 'text-pink-500' },
         { name: 'React.js', icon: 'fab fa-react', color: 'text-blue-400' },
+        { name: 'Next.js', image: '/assets/nextjs.png' },
         { name: 'Node.js', icon: 'fab fa-node-js', color: 'text-green-500' },
         { name: 'Git', icon: 'fab fa-git-alt', color: 'text-orange-600' },
         { name: 'GitHub', icon: 'fab fa-github', color: 'text-gray-900 dark:text-gray-100' },
         { name: 'MongoDB', image: '/assets/mongodb.png' },
+        { name: 'Firebase', image: '/assets/firebase.png' },
+        { name: 'Supabase', image: '/assets/supabase.png' },
         { name: 'Figma', icon: 'fab fa-figma', color: 'text-purple-500' },
         { name: 'Canva', image: '/assets/canva.png' },
     ];
