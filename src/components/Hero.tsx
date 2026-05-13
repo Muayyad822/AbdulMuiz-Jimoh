@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
 
 const Hero = () => {
-    const [role, setRole] = useState('Web Developer');
+    const roles = ['Web Developer', 'Web Designer', 'Co-founder', 'Full-Stack Developer'];
+    const [roleIndex, setRoleIndex] = useState(0);
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setRole((prev) => (prev === 'Web Developer' ? 'Web Designer' : 'Web Developer'));
+            setRoleIndex((prev) => (prev + 1) % roles.length);
         }, 1800);
 
         return () => clearInterval(interval);
@@ -14,7 +15,7 @@ const Hero = () => {
     return (
         <section
             id="Hero"
-            className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:mb-32 lg:pt-64 pt-24 px-6 scroll-mt-28"
+            className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:pt-48 pt-24 px-6 scroll-mt-20"
         >
             <div className="relative group">
                 <img
@@ -27,17 +28,18 @@ const Hero = () => {
 
             <div className="max-w-2xl text-center lg:text-left">
                 <h4 className="text-xl font-medium mb-2 animate-fade-in-out" id="textChange">
-                    {role}
+                    {roles[roleIndex]}
                 </h4>
                 <h1 className="text-4xl font-bold mb-4">
                     AbdulMuiz<span className="bg-primary text-white px-2 mx-4 rounded">Jimoh</span>
                 </h1>
                 <p className="text-base leading-relaxed mb-8">
-                    I'm a web developer passionate about creating clean, user-friendly
-                    websites. With expertise in front-end development, back-end
-                    development and UI/UX design, I blend creativity with technical
-                    know-how to deliver seamless digital experiences. Let's connect and
-                    bring your online vision to life!
+                    I'm a full-stack web developer and co-founder of Tahleem, an AI-powered
+                    Islamic education startup. I build clean, scalable web experiences using
+                    React, Next.js, Node.js, and modern backend platforms like Firebase and
+                    Supabase. I've also contributed to multiple early-stage startups,
+                    helping bring their products to life, blending creativity with technical
+                    depth at every stage.
                 </p>
                 <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
                     <a

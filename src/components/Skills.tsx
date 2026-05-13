@@ -1,6 +1,6 @@
 const Skills = () => {
     return (
-        <section id="Skills" className="lg:mb-32 pt-24 px-4 scroll-mt-28">
+        <section id="Skills" className="lg:mb-32 pt-20 px-4 scroll-mt-20">
             <h1 className="text-3xl font-bold mb-12 border-b-2 border-primary pb-2 w-fit mx-auto lg:mx-64">
                 SKILLS
             </h1>
@@ -14,7 +14,8 @@ const Skills = () => {
                         <p className="text-sm leading-relaxed">
                             I specialize in Front-End Development with a strong foundation in
                             HTML5, CSS3, and JavaScript. I'm experienced in working with
-                            frameworks like React to build dynamic, responsive user interfaces.
+                            frameworks like React and Next.js to build dynamic, responsive,
+                            and performant user interfaces.
                         </p>
                     </div>
                 </div>
@@ -25,8 +26,10 @@ const Skills = () => {
                     <div>
                         <h2 className="text-xl font-bold mb-2">Back-End Development</h2>
                         <p className="text-sm leading-relaxed">
-                            On the Back-End side, I'm proficient in Node.js and I use MongoDB
-                            for database management to create robust server-side applications.
+                            On the Back-End side, I'm proficient in Node.js and use MongoDB,
+                            Firebase, and Supabase for database management and backend
+                            services, enabling me to build robust, scalable server-side
+                            applications and real-time features.
                         </p>
                     </div>
                 </div>

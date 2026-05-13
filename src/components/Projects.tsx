@@ -1,20 +1,46 @@
+import { useState } from 'react';
 import { projects } from '../data/projects';
 
+type Category = 'All' | 'Website' | 'App';
+
 const Projects = () => {
-    // Projects data is now imported from ../data/projects.ts
+    const [activeTab, setActiveTab] = useState<Category>('All');
+
+    const filtered = activeTab === 'All'
+        ? projects
+        : projects.filter((p) => p.category === activeTab);
+
+    const tabs: Category[] = ['All', 'Website', 'App'];
 
     return (
-        <section id="Projects" className="lg:mb-32 pt-24 px-4 scroll-mt-28">
-            <h1 className="text-3xl font-bold mb-12 border-b-2 border-primary pb-2 w-fit mx-auto lg:mx-64">
+        <section id="Projects" className="lg:mb-32 pt-20 px-4 scroll-mt-20">
+            <h1 className="text-3xl font-bold mb-8 border-b-2 border-primary pb-2 w-fit mx-auto lg:mx-64">
                 PROJECTS
             </h1>
+
+            {/* Filter Tabs */}
+            <div className="flex justify-center gap-2 mb-10">
+                {tabs.map((tab) => (
+                    <button
+                        key={tab}
+                        onClick={() => setActiveTab(tab)}
+                        className={`px-5 py-2 rounded-full text-sm font-semibold transition-all duration-200 border-2 ${
+                            activeTab === tab
+                                ? 'bg-primary border-primary text-white shadow-md shadow-primary/30'
+                                : 'border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-300 hover:border-primary dark:hover:border-primary-light hover:text-primary dark:hover:text-primary-light'
+                        }`}
+                    >
+                        {tab === 'All' ? `All (${projects.length})` : tab === 'Website' ? `Websites (${projects.filter(p => p.category === 'Website').length})` : `Apps (${projects.filter(p => p.category === 'App').length})`}
+                    </button>
+                ))}
+            </div>
 
             <div className="md:hidden text-center text-sm text-gray-500 dark:text-gray-400 mb-6 animate-pulse">
                 Swipe to explore <i className="fa-solid fa-arrow-right ml-1"></i>
             </div>
 
             <div className="flex overflow-x-auto md:overflow-visible pb-6 snap-x snap-mandatory md:grid md:grid-cols-2 lg:grid-cols-3 md:pb-0 gap-6 md:gap-8 max-w-6xl mx-auto">
-                {projects.map((project) => (
+                {filtered.map((project) => (
                     <div
                         key={project.title}
                         className="min-w-[80vw] snap-center md:min-w-0 bg-white dark:bg-gray-800 rounded-t-xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300 flex flex-col min-h-[400px]"
