@@ -36,10 +36,30 @@ const Header = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
     };
 
+    const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+        e.preventDefault();
+        const element = document.getElementById(id);
+        if (element) {
+            const headerHeight = document.querySelector('header')?.offsetHeight || 80;
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+            setIsMobileMenuOpen(false);
+        }
+    };
+
     return (
         <>
             <header className="fixed top-0 left-0 w-full z-50 bg-gray-100/90 dark:bg-gray-900/90 backdrop-blur-sm py-4 px-4 sm:px-8 lg:px-12 flex justify-between items-center gap-4 shadow-md dark:shadow-gray-800/50">
-                <a href="#About" className="flex items-center gap-2">
+                <a 
+                    href="#Hero" 
+                    onClick={(e) => handleNavClick(e, 'Hero')}
+                    className="flex items-center gap-2"
+                >
                     <img src="/assets/ajlogo.png" alt="logo" className="h-12 w-auto" />
                 </a>
 
@@ -51,6 +71,7 @@ const Header = () => {
                                 <li key={item}>
                                     <a
                                         href={`#${item === 'Home' ? 'Hero' : item}`}
+                                        onClick={(e) => handleNavClick(e, item === 'Home' ? 'Hero' : item)}
                                         className="text-gray-900 dark:text-gray-100 hover:text-primary dark:hover:text-primary-light hover:font-bold transition-all duration-200 border-b-2 border-transparent hover:border-primary dark:hover:border-primary-light pb-1"
                                     >
                                         {item}
@@ -123,7 +144,7 @@ const Header = () => {
                             <li key={item}>
                                 <a
                                     href={`#${item === 'Home' ? 'Hero' : item}`}
-                                    onClick={() => setIsMobileMenuOpen(false)}
+                                    onClick={(e) => handleNavClick(e, item === 'Home' ? 'Hero' : item)}
                                     className="block py-2 px-4 text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg transition-colors duration-200 font-medium"
                                 >
                                     {item}

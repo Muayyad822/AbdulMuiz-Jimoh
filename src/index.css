@@ -2,7 +2,13 @@
 @variant dark (&:where(.dark, .dark *));
 
 html {
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; -- Removed to prevent jumping conflicts with JS handler */
+  scroll-padding-top: 5rem; /* Fallback for fixed header */
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 

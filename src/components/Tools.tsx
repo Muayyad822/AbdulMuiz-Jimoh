@@ -18,7 +18,7 @@ const Tools = () => {
     ];
 
     return (
-        <section id="Tools" className="lg:mb-32 pt-24 px-4 scroll-mt-28">
+        <section id="Tools" className="lg:mb-32 pt-20 px-4 scroll-mt-20">
             <h1 className="text-3xl font-bold mb-12 border-b-2 border-primary pb-2 w-fit mx-auto lg:mx-64">
                 TOOLS  & TECHNOLOGIES
             </h1>

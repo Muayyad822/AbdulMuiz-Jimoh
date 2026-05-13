@@ -2,6 +2,7 @@
 export const projects = [
     {
         title: 'Tahleem Web app ',
+        category: 'App',
         description:
             'Tahleem is an all-in-one Islamic education platform for Muslims to perfect Tajweed, understand the Quran, and master Arabic with advanced AI technology and scholarly-verified content.', 
         image: '/assets/tahleem.png',
@@ -10,6 +11,7 @@ export const projects = [
     },
     {
         title: 'Africa Property Hub Website',
+        category: 'Website',
         description:
             'This is a website for Africa Property Hub, an African real estate platform that helps to build, buy, sell, rent or manage property from a place of information across Africa and beyond.',
         image: '/assets/aph.PNG',
@@ -18,6 +20,7 @@ export const projects = [
     },
     {
         title: 'Jarus Homes Website',
+        category: 'Website',
         description:
             'This is a website for Jarus Homes, a real estate company that provides housing solutions for everybody irrespective of their social and economic class, bridging the gap for the middle class while playing in the high-end market.',
         image: '/assets/jarus.png',
@@ -26,6 +29,7 @@ export const projects = [
     },
     {
         title: 'SHD Properties Website',
+        category: 'Website',
         description:
             'This is a website for SHD Properties, a real estate company founded by three passionate Nigerians, with experience spanning property development and real estate transactions in Nigeria and the United Kingdom, who share a common vision to make quality housing accessible and transform the real estate experience across Nigeria and Africa.',
         image: '/assets/shd.png',
@@ -34,6 +38,7 @@ export const projects = [
     },
     {
         title: 'BSmart Product Landing Page',
+        category: 'Website',
         description:
             'This is a product landing page for BSmart, a company that provides smart home products. The page is designed to be responsive and accessible, with a clean and modern design.',
         image: '/assets/bsmart.PNG',
@@ -42,6 +47,7 @@ export const projects = [
     },
     {
         title: 'Al Abraar Landing Page',
+        category: 'Website',
         description:
             'This modern, responsive landing page for Al-Abraar Academy highlights course offerings, schedules, and clear enrollment calls-to-action. Built for accessibility and fast load times, it helps prospective students discover programs and sign up effortlessly.',
         image: '/assets/abraaracad.PNG',
@@ -50,6 +56,7 @@ export const projects = [
     },
     {
         title: "The Warrior's Journal",
+        category: 'App',
         description:
             "This is a modern, accessible PWA designed to empower individuals managing chronic health conditions, especially sickle cell disease. The Warrior's Journal provides comprehensive health tracking, crisis support, and motivational tools that work seamlessly across devices, helping users take proactive control of their wellness.",
         image: '/assets/twj.PNG',
@@ -58,6 +65,7 @@ export const projects = [
     },
     {
         title: 'Beyond The Crisis',
+        category: 'App',
         description:
             'This is a dedicated app for sickle cell warriors, offering support, resources, and guidance tailored to those living with sickle cell disease. The app helps users manage their health, connect with a supportive community, and access information to improve their quality of life. With practical tools and curated content from Youtube.',
         image: '/assets/btc.PNG',
@@ -66,6 +74,7 @@ export const projects = [
     },
     {
         title: 'VerifyMeds',
+        category: 'App',
         description:
             'VerifyMeds is a Progressive Web App (PWA) that enables users and pharmacists to verify the authenticity of medications using QR codes and manual input. The system uses NAFDAC drug data, works offline, and supports counterfeit reporting to improve public health and pharmaceutical transparency.',
         image: '/assets/vrfmed.png',
@@ -74,6 +83,7 @@ export const projects = [
     },
     {
         title: 'Qoreeny',
+        category: 'App',
         description:
             'This is a simple web app to help users track their Ramadan goals and stay motivated throughout the month. It allows users to add personal goals, choose from a list of recommended goal, track their completion, and receive notifications about their progress.',
         image: '/assets/qoreeny.PNG',
@@ -82,6 +92,7 @@ export const projects = [
     },
     {
         title: 'Ticket Generator',
+        category: 'App',
         description:
             'This is a React-based web application that allows users to generate a personalized conference ticket. Users can enter their full name, email, and avatar URL (Cloudinary or external link) to create a digital ticket.',
         image: '/assets/ticket.PNG',
@@ -90,6 +101,7 @@ export const projects = [
     },
     {
         title: 'Soniva',
+        category: 'App',
         description:
             'This is a modern, accessible web application I developed to help people with hearing loss reconnect with the world. Built as a progressive web app (PWA), Soniva provides a suite of hearing assistance tools that work across devices without requiring expensive specialized hardware.',
         image: '/assets/soniva.PNG',

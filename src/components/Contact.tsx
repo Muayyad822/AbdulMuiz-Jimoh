@@ -27,7 +27,7 @@ const Contact = () => {
     };
 
     return (
-        <section id="Contact" className="lg:mb-32 pt-24 px-4 scroll-mt-28">
+        <section id="Contact" className="lg:mb-32 pt-20 px-4 scroll-mt-20">
             <h1 className="text-3xl font-bold mb-12 border-b-2 border-primary pb-2 w-fit mx-auto lg:mx-32">
                 CONTACT
             </h1>
@@ -158,12 +158,18 @@ const Contact = () => {
                             className="w-full bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 h-32 focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-light transition-colors duration-200"
                         ></textarea>
 
-                        <button
-                            type="submit"
-                            className="bg-gray-700 dark:bg-gray-200 border-2 border-primary dark:border-primary-light text-white dark:text-gray-900 px-8 py-2 rounded-lg font-bold hover:shadow-lg hover:shadow-primary/30 dark:hover:shadow-primary-light/30 transition-all duration-200 hover:-translate-y-0.5"
-                        >
-                            Send
-                        </button>
+                        <div className="flex items-center gap-3">
+                            <button
+                                type="submit"
+                                className="bg-gray-700 dark:bg-gray-200 border-2 border-primary dark:border-primary-light text-white dark:text-gray-900 px-8 py-2 rounded-lg font-bold hover:shadow-lg hover:shadow-primary/30 dark:hover:shadow-primary-light/30 transition-all duration-200 hover:-translate-y-0.5"
+                            >
+                                Send
+                            </button>
+                            <p className="text-xs text-gray-500 dark:text-gray-400 flex items-center gap-1">
+                                <i className="fab fa-whatsapp text-green-500 text-base"></i>
+                                You'll be redirected to WhatsApp
+                            </p>
+                        </div>
                     </form>
                 </div>
             </div>
