@@ -130,7 +130,7 @@ export const games = [
     {
         title: 'Just Crack It',
         description:
-            "A web-based logic game where players must crack a 3-digit password. Using a series of hints, you must deduce which numbers are correct and where they are placed. It's a fun, challenging exercise in pure logic.",
+            "A web-based logic game where players must crack 3-digit or 4-digit password. Using a series of hints, you must deduce which numbers are correct and where they are placed. It's a fun, challenging exercise in pure logic.",
         image: '/assets/jci.PNG',
         live: 'https://justcrackit.vercel.app/',
         github: 'https://github.com/Muayyad822/crackit',
@@ -146,7 +146,7 @@ export const games = [
     {
         title: 'Fraggy',
         description:
-            'A fun and engaging game built to test your reflexes and precision. Navigate through obstacles and aim for the highest score in this exciting arcade-style adventure.',
+            'A fun and engaging game built to test your visual precision. Unscramble the fragments to guess the full phrase or idiom!.',
         image: '/assets/fraggy.PNG',
         live: 'https://fraggy-rouge.vercel.app/',
         github: 'https://github.com/Muayyad822/fraggy', 
@@ -156,7 +156,7 @@ export const games = [
         description:
             'The classic hand game brought to the web. Play against the computer in this interactive version of Rock, Paper, Scissors. Features clean UI and instant feedback.',
         image: '/assets/rps.PNG',
-        live: 'https://muayyad822.github.io/Rock-Paper-Scissors/',
+        live: 'https://rock-paper-scissors-opal-seven.vercel.app/',
         github: 'https://github.com/Muayyad822/Rock-Paper-Scissors',
     },
 ];
